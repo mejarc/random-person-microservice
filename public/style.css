@@ -1,0 +1,386 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+/*   ----- Variables  -----  */
+:root {
+  --text-color: #f2f1ef;
+  --reverse-text-color: var(--background-color);
+  --highlight-text-color: #b2cce5;
+  --link-color: #ececec;
+  --visited-color: #d4d4d4;
+  --background-color: #34495e;
+  --reverse-background-color: var(--text-color);
+  --section-background-color: #3b3b3b;
+  --basic-margin: 1em;
+  --basic-padding: 0.5em;
+  --generous-padding: 0.65em;
+  --border-color: #939393;
+  --alt-border-color: #7bacdd;
+  font-size: 120%;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+
+body {
+  /* Can alternatively define in html {} or :root {} */
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  margin: var(--basic-margin);
+  padding: var(--basic-padding);
+}
+
+/* ----- Anchors ----- Text links */
+a {
+  color: var(--link-color);
+}
+a:link {
+  color: var(--link-color);
+}
+a:hover {
+  color: var(--highlight-text-color);
+}
+a:active {
+  color: var(--highlight-text-color);
+}
+a:visited {
+  color: var(--visited-color);
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  background-color: var(--section-background-color);
+  border: var(--border-color) 1px solid;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+nav a {
+  color: var(--text-color);
+  display: inline-block;
+  margin: var(--basic-margin);
+  padding: var(--basic-padding);
+  text-decoration: var(--highlight-text-color) underline dotted;
+}
+nav a:hover {
+  background-color: var(--background-color);
+  color: var(--highlight-text-color);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav li {
+  flex: 1;
+}
+/*  ----- Page layout blocks -----  */
+header {
+  background-color: var(--section-background-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  font-size: 1rem;
+  font-weight: bold;
+  margin: var(--basic-margin);
+  padding: var(--basic-padding);
+}
+main {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 0 1px var(--highlight-text-color);
+  padding: var(--basic-padding);
+}
+/*
+section {
+}
+article {
+}
+#topic1 {
+}
+#topic2 {
+}
+#gallery1 {
+}
+#gallery2 {
+}
+div {
+}
+aside {
+} */
+footer {
+  background-color: var(--section-background-color);
+  color: var(--text-color);
+  border: 1px 0 0 0 solid var(--border-color);
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin: var(--basic-margin);
+  padding: var(--basic-padding);
+}
+
+/*  -----  Typography  ----- */
+/* p {
+}
+br {
+}
+ol,
+ul,
+dl {
+}
+li {
+}
+dt {
+}
+dd {
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+} /* Define consistant font family.*/
+/*h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+abbr {
+}
+acronym {
+}
+address {
+}
+blockquote {
+}
+q {
+}
+cite {
+}
+em {
+}
+hr {
+}
+mark {
+}
+s {
+}
+span {
+}
+strong {
+}
+sub {
+}
+sup {
+}
+time {
+}
+*/
+
+/*  ----- Coding or instructional typography ----- */
+/* pre {
+}
+code {
+}
+kbd {
+}
+samp {
+}
+var {
+}
+del {
+}
+ins {
+}*/
+
+/*  ----- Table ----- */
+table {
+  width: 80vw;
+  margin-top: 2em;
+} /*
+caption {
+}
+thead {
+}
+tbody {
+}
+tfoot {
+} */
+tr {
+  border: 0;
+  padding: var(--basic-padding);
+}
+tr:nth-child(odd) {
+  background-color: var(--section-background-color);
+}
+th {
+  background-color: var(--reverse-background-color);
+  border: 1px 0 var(--highlight-text-color);
+  color: var(--reverse-text-color);
+  padding: var(--basic-padding);
+  text-align: left;
+}
+td {
+  border: 0;
+  padding: var(--basic-padding);
+}
+.numeric {
+  text-align: right;
+}
+
+/* colgroup {
+}
+data {
+}
+datalist {
+} */
+
+/*  ----- Form ----- */
+form {
+}
+fieldset {
+  border-color: var(--alt-border-color);
+  border-style: dotted;
+}
+legend {
+}
+label {
+}
+button {
+  background-color: var(--section-background-color);
+  border: 1px solid var(--border-color);
+  color: var(--link-color);
+  font-size: 1rem;
+  padding: var(--generous-padding);
+}
+button:focus {
+  outline: 1px solid var(--highlight-text-color);
+}
+button:hover {
+  color: var(--highlight-text-color);
+}
+input {
+  color: var(--text-color);
+  font-family: "Kanit", Arial, sans-serif;
+  font-size: 1rem;
+  margin-left: 1rem;
+  padding: var(--generous-padding);
+}
+input:focus {
+  outline: 1px solid var(--highlight-text-color);
+}
+input:invalid {
+  background-color: var(--section-background-color);
+}
+input::placeholder {
+  font-style: italic;
+}
+output {
+}
+meter {
+}
+progress {
+}
+select {
+}
+optgroup {
+}
+option {
+}
+textarea {
+}
+
+/* ----- Media ----- */
+figure {
+}
+figcaption {
+}
+img {
+}
+svg {
+}
+picture {
+}
+source {
+}
+iframe {
+}
+video {
+}
+audio {
+}
+embed {
+}
+object {
+}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.floatright {
+  float: right;
+}
+.floatleft {
+  float: left;
+}
+/*
+.center-middle {
+} 
+.ten {
+}
+.twenty {
+}
+.thirty {
+}
+.forty {
+}
+.fifty {
+}
+.sixty {
+}
+.seventy {
+}
+.eighty {
+}
+
+.radius {
+}
+.circle {
+}
+.boxshadow {
+}
+.tshadow {
+}
+.gradient {
+}
+.shape {
+}*/
+.icons {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 7rem;
+}
+.icons svg {
+  height: 0.65rem;
+}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {
+}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {
+}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {
+}
