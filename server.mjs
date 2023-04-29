@@ -9,8 +9,8 @@ import asyncHandler from "express-async-handler";
 import fetch from "node-fetch";
 
 const PORT = process.env.PORT;
-if (port == null || port == ""){
-  port = 8000;
+if (PORT == null || PORT == ""){
+  PORT = 8000;
 };
 
 const app = express();
