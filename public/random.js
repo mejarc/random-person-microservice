@@ -1,4 +1,7 @@
 "use strict";
+// Adapted from CS290 Assignment 5 project file
+// Date: November 2022
+// Authors: Pam Van Londen, Melanie Archer
 
 /* Asynchronously handle the event */
 async function getData(e) {
