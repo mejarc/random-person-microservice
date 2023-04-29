@@ -9,6 +9,10 @@ import asyncHandler from "express-async-handler";
 import fetch from "node-fetch";
 
 const PORT = process.env.PORT;
+if (port == null || port = ""){
+  port = 8000;
+};
+
 const app = express();
 
 app.use(express.static("public"));

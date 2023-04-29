@@ -3,13 +3,13 @@
 A microservice that delivers a JSON object with the name and details of a random (fictional) person from [RandomUser.me](http://RandomUser.me) via HTTP.
 
 ## How to request data from this microservice
-You will request data from 'http://..TODO......../random-person' with JavaScript `fetch` or `XMLHttpRequest`
+You will request data from 'https://random-person.herokuapp.com/random-person' with JavaScript `fetch` or `XMLHttpRequest`
 
 ### JavaScript fetch example
 
 ```js
 
-let API = 'http://..TODO......../random-person';
+let API = 'https://random-person.herokuapp.com/random-person';
 
 return fetch(API)
       .then((resp) => resp.json())
