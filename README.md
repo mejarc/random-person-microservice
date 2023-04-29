@@ -5,11 +5,11 @@ A microservice that delivers a JSON object with the name and details of a random
 ## How to request data from this microservice
 You will request data from `https://random-person.herokuapp.com/random-person` with JavaScript `fetch` or `XMLHttpRequest`.
 
-### JavaScript fetch example
+### JavaScript fetch example, for localhost
 
 ```js
-
-let API = 'https://random-person.herokuapp.com/random-person';
+const cors_api_url = 'https://guarded-scrubland-83014.herokuapp.com/';
+let API = cors_api_url + 'https://random-person.herokuapp.com/random-person';
 
 return fetch(API)
       .then((resp) => resp.json())
