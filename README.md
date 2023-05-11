@@ -9,7 +9,7 @@ URL: `https://guarded-scrubland-83014.herokuapp.com/https://random-person.heroku
 
 HTTP Method: GET
 
-### JavaScript fetch example, for localhost
+### JavaScript fetch example, for your application on localhost
 
 The value of `cors_api_url` is a handy workaround for the common ["CORS Missing Allow Origin"](https://dev.to/imiebogodson/fixing-the-cors-error-by-hosting-your-own-proxy-on-heroku-3lcb) error you can get when fetching external data from `localhost`.
 
@@ -124,6 +124,26 @@ $  git clone https://github.com/mejarc/random-person-microservice.git
 $  cd random-person-microservice
 $  npm i
 $  npm start
+```
+
+Note that you will have to install a [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) workaround in your application to use a locally hosted version of this microservice. Because of this difficulty, I recommend you use the Heroku-hosted microservice as detailed above.
+
+Once the microservice is installed locally, your `fetch` request to it will change to this:
+
+```js
+let API = 'https://localhost:3000/random-person';
+
+return fetch(API)
+      .then((resp) => resp.json())
+      .then((json) => {
+        if (json.error) {
+          console.log(json.error);
+        } else if (json.results) {
+          useData(json);
+        }
+    })
+     .catch((err) => console.error(err));
+
 ```
 
 ## UML sequence diagram
