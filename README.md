@@ -5,7 +5,7 @@ A microservice that delivers a JSON object with the name and details of a random
 ## How to request data from this microservice
 You can request data with JavaScript `fetch` or `XMLHttpRequest`.
 
-URL: `https://guarded-scrubland-83014.herokuapp.com/https://random-person.herokuapp.com/random-person` 
+API URL: `https://random-person.herokuapp.com/random-person` 
 
 HTTP Method: GET
 
@@ -16,6 +16,7 @@ The value of `cors_api_url` is a handy workaround for the common ["CORS Missing 
 ```js
 const cors_api_url = 'https://guarded-scrubland-83014.herokuapp.com/';
 let API = cors_api_url + 'https://random-person.herokuapp.com/random-person';
+
 
 return fetch(API)
       .then((resp) => resp.json())
