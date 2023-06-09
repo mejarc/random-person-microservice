@@ -7,6 +7,7 @@ import "dotenv/config";
 import express from "express";
 import asyncHandler from "express-async-handler";
 import fetch from "node-fetch";
+import cors from 'cors';
 
 const PORT = process.env.PORT;
 if (PORT == null || PORT == ""){
@@ -14,7 +15,7 @@ if (PORT == null || PORT == ""){
 };
 
 const app = express();
-
+app.use(cors());
 app.use(express.static("public"));
 
 const API = "https://randomuser.me/api/";
